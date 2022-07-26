@@ -1,1 +1,1 @@
-web: gunicorn  Market.wsgi  --log-file -
+web: gunicorn  Products.Drf.wsgi  
