@@ -1,1 +1,1 @@
-web: gunicorn  Products.Drf.wsgi
+web: gunicorn  Drf.wsgi
