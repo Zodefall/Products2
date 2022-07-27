@@ -1,1 +1,1 @@
-web: gunicorn product9.wsgi
+web: gunicorn product9.drf.wsgi
