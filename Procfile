@@ -1,1 +1,1 @@
-web: gunicorn Products.wsgi --preload
+web: gunicorn Products.drf.wsgi --preload
