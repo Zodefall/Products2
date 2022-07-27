@@ -1,1 +1,1 @@
-web: gunicorn  wsgi.py --preload
+web: gunicorn  drf.drf.wsgi --preload
