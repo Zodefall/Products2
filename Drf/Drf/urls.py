@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
-from Drf.Market.views import MarketAPIListCreate, CatView
+from Market.views import MarketAPIListCreate, CatView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
