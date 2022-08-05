@@ -1,1 +1,0 @@
-web: gunicorn Products.Market.wsgi
