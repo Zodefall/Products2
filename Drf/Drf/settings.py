@@ -99,6 +99,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+db_from_env = dj_database_url.config()
+DATABASE['default'].update(db_from_env)
 
 
 # Password validation
@@ -162,5 +164,4 @@ SPECTACULAR_SETTINGS = {
 }
 
 # prod_db = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(prod_db)
-# django_heroku.settings(locals())
+
