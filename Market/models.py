@@ -3,7 +3,7 @@ from django.db import models
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User,on_delete=models.PROTECT)
+    user = models.OneToOneField(User,on_delete=models.PROTECT,upload_to='photos/%Y/%m/%d')
     avatar = models.ImageField()
 
     def __str__(self):
