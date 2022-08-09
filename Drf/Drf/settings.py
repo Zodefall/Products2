@@ -83,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Drf.wsgi.application'
+WSGI_APPLICATION = 'Drf.Drf.wsgi.application'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Database
