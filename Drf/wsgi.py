@@ -1,5 +1,5 @@
 """
-WSGI config for Drf project.
+WSGI config for Drf1 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
