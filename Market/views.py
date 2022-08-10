@@ -4,8 +4,8 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
 
-from .models import Market
-from .serializers import MarketSerializer
+from .models import Market, UserProfile
+from .serializers import MarketSerializer, UserSerializer
 
 
 class MarketAPIListCreate(generics.ListCreateAPIView):
@@ -16,5 +16,11 @@ class MarketAPIListCreate(generics.ListCreateAPIView):
 
 class CatView(generics.ListAPIView):
     serializer_class = MarketSerializer
+
     def get_queryset(self):
         return Market.objects.filter(category_id=self.kwargs['category_id'])
+
+
+class UserView(generics.ListCreateAPIView):
+    serializer_class = UserSerializer
+    queryset = UserProfile.objects.all()

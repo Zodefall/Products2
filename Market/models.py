@@ -3,11 +3,11 @@ from django.db import models
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User,on_delete=models.PROTECT,upload_to='photos/%Y/%m/%d')
-    avatar = models.ImageField()
+    user = models.OneToOneField(User,on_delete=models.PROTECT)
+    avatar = models.ImageField(upload_to='photos/%Y/%m/%d')
 
     def __str__(self):
-        return self.name
+        return self.user.username
 
 class Market(models.Model):
     name = models.CharField(max_length=40)
