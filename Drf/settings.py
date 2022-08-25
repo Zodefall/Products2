@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+import json
 import os
 from pathlib import Path
 
@@ -28,7 +29,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
-GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE =  os.path.join (BASE_DIR,'GoogleKey.json')
+
+
+MyKeyJS = env('KeyJs')
+with open("GoogleKey.json", "w") as jsonfile:
+    jsonfile.write(MyKeyJS)
+    print("Write successful")
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.path.join(BASE_DIR, 'GoogleKey.Json')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -97,8 +104,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
-
+# #
+#
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',

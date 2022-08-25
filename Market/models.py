@@ -6,7 +6,7 @@ gd_storage = GoogleDriveStorage()
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User,on_delete=models.PROTECT)
-    avatar = models.ImageField(upload_to='photos/%Y/%m/%d',default='default.png',blank=True,storage=gd_storage)
+    avatar = models.ImageField(upload_to='photos',default='default.png',blank=True,storage=gd_storage)
 
     def __str__(self):
         return self.user.username
