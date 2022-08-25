@@ -32,10 +32,10 @@ SECRET_KEY = env('SECRET_KEY')
 
 
 MyKeyJS = env('KeyJs')
-with open("GoogleKey.json", "w") as jsonfile:
+with open("Sss.json", "w") as jsonfile:
     jsonfile.write(MyKeyJS)
     print("Write successful")
-GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.path.join(BASE_DIR, 'GoogleKey.Json')
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.path.join(BASE_DIR, 'sss.Json')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
