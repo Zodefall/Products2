@@ -31,12 +31,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 
-MyKeyJS = env('KeyJs')
-with open("GoogleKey.json", "w") as jsonfile:
-    jsonfile.write(MyKeyJS)
-    print("Write successful")
-GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = 'GoogleKey.Json'
+# MyKeyJS = env('KeyJs')
+# with open("GoogleKey.json", "w") as jsonfile:
+#     jsonfile.write(MyKeyJS)
+#     print("Write successful")
+# GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = 'GoogleKey.Json'
 # SECURITY WARNING: don't run with debug turned on in production!
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = None
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE_CONTENTS = env('GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE_CONTENTS')
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -104,8 +106,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# #
 #
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
