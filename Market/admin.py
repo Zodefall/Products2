@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from django.utils.safestring import mark_safe
 
-from Market.models import Market, Category, UserProfile
+from Market.models import Market, Category
 
 
 #
@@ -21,4 +21,3 @@ from Market.models import Market, Category, UserProfile
 
 admin.site.register(Market)
 admin.site.register(Category)
-admin.site.register(UserProfile)

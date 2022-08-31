@@ -1,15 +1,16 @@
 from django.contrib.auth.models import User
 from django.db import models
 from gdstorage.storage import GoogleDriveStorage
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
-gd_storage = GoogleDriveStorage()
 
-class UserProfile(models.Model):
-    user = models.OneToOneField(User,on_delete=models.PROTECT)
-    avatar = models.ImageField(upload_to='photos',default='default.png',blank=True,storage=gd_storage)
+# class UserProfile(models.Model):
+#     user = models.OneToOneField(User,on_delete=models.PROTECT)
+#     avatar = models.ImageField(upload_to='photos',default='default.png',blank=True,storage=gd_storage)
+#
+#     def __str__(self):
+#         return self.user.username
 
-    def __str__(self):
-        return self.user.username
 
 class Market(models.Model):
     name = models.CharField(max_length=40)
