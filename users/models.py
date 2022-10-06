@@ -43,7 +43,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=50, unique=True)  # Логин
     email = models.EmailField(max_length=100, unique=True)  # Email
     avatar = models.ImageField(upload_to='photos', default='default.png', blank=True, storage=gd_storage)
-    is_active = models.BooleanField(default=True)  # Статус активации
+    is_active = models.BooleanField(default=False)  # Статус активации
     is_staff = models.BooleanField(default=False)  # Статус админа
 
     USERNAME_FIELD = 'email'  # Идентификатор для обращения
